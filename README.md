@@ -88,7 +88,7 @@ Here, segmentations were aligned by panoptica and metrics were computed for each
 
 ### Conclusion
 
-Using a contrast translation approach is relevant only if the model does not perform well on the input contrast. Because a naive translation between two different contrasts not highligting the same tissues properties may lead to slight modifications of the anatomy.
+Using a contrast translation approach is relevant only if the model does not perform well on the input contrast. Because a naive translation between two different contrasts may lead to slight modifications of the anatomy.
 
 To validate the translation approach with vertebral labeling, the inference should be done on a different dataset which was not seen during training of the two deep learning models. Currently, too few MRI datasets with manual segmentation of the spine are available open-source.
 
