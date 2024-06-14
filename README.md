@@ -50,6 +50,23 @@ For this work, the dataset `spider` was used for inference, the cGAN approach wa
 
 <img width="1123" alt="Screenshot 2024-06-14 at 13 52 30" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/40ff2c71-5454-4fcc-8f6f-82bca7b61e06">
 
+> Surprisingly [spineps](https://github.com/Hendrik-code/spineps) performed well on the T1w lumbar scans of the `spider` dataset. One possible reason is that spineps was actually trained on the T2w scans of the same patients in this dataset.
+
+### Evaluation of the lumbar spine segmentations
+
+To evaluate the quality of the final segmentations with and without the use of the contrast translation approach, the framework [panoptica](https://github.com/BrainLesion/panoptica) was used.
+
+> panoptica allows us to evaluate segmentations from both semantic and instance standpoint ([paper](https://arxiv.org/abs/2312.02608))
+
+#### Global segmentation
+
+Here, segmentations are binarized and metrics are computed on the full segmentations.
+
+| Global Dice Score | Global average symmetric surface distance (ASSD)|
+| :---: | :---: |
+| <img width="645" alt="Screenshot 2024-06-14 at 14 12 28" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/0d523670-408b-48fd-9557-522369497605"> | <img width="779" alt="Screenshot 2024-06-14 at 14 14 17" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/6eb20996-362d-415b-acaf-dbb3aff115fe"> |
+| <img width="850" alt="Screenshot 2024-06-14 at 14 12 28" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/dbd71b84-bda4-437c-9f2f-3c1a2b96c6cd"> | <img width="800" alt="Screenshot 2024-06-14 at 14 12 28" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/21c0327a-2b47-44b8-88e4-b8accb3835df"> |
+
 
 
 
