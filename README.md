@@ -34,7 +34,7 @@ My objective was to generate fake T2w scans from any given contrast to help deep
 
 ### Preprocessing steps and method
 
-<img width="930" alt="Screenshot 2024-06-14 at 09 53 12" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/a8c90f38-be21-435f-8f55-8bebaffb5395">
+<img width="1123" alt="Screenshot 2024-06-14 at 09 53 12" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/a8c90f38-be21-435f-8f55-8bebaffb5395">
 
 ### Previous work on cervical FOV
 
@@ -58,7 +58,7 @@ To evaluate the quality of the final segmentations with and without the use of t
 
 > panoptica allows us to evaluate segmentations from both semantic and instance standpoint ([paper](https://arxiv.org/abs/2312.02608))
 
-#### Global segmentation
+#### Global metrics
 
 Here, segmentations are binarized and metrics are computed on the full segmentations.
 
@@ -67,7 +67,14 @@ Here, segmentations are binarized and metrics are computed on the full segmentat
 | <img width="645" alt="Screenshot 2024-06-14 at 14 12 28" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/0d523670-408b-48fd-9557-522369497605"> | <img width="779" alt="Screenshot 2024-06-14 at 14 14 17" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/6eb20996-362d-415b-acaf-dbb3aff115fe"> |
 | <img width="850" alt="Screenshot 2024-06-14 at 14 12 28" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/dbd71b84-bda4-437c-9f2f-3c1a2b96c6cd"> | <img width="800" alt="Screenshot 2024-06-14 at 14 12 28" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/21c0327a-2b47-44b8-88e4-b8accb3835df"> |
 
+#### Instance wise metrics
 
+Here, segmentations were aligned by panoptica and metrics were computed for each instance (individual vertebrae/discs). The mean and standard deviation is then plotted.
+
+| Instance Dice Score | Instance average symmetric surface distance (ASSD)| Instance intersection over union (IoU) |
+| :---: | :---: | :---: |
+| ![instance_dice](https://github.com/brainhack-school2024/molinier_project/assets/68945192/e97f448b-2ca8-4ba3-8f50-f62bde29bec4) | ![instance_assd](https://github.com/brainhack-school2024/molinier_project/assets/68945192/567edb86-43da-4ffc-8dc5-68770cd4b196) | ![instance_iou](https://github.com/brainhack-school2024/molinier_project/assets/68945192/0b25f2a5-bb12-4c5c-9dc8-09ae678256c1) |
+|![instance_dice_std](https://github.com/brainhack-school2024/molinier_project/assets/68945192/ecdb579c-5f8f-418e-8849-88c57b9e996f) | ![instance_assd_std](https://github.com/brainhack-school2024/molinier_project/assets/68945192/866f0c5f-3eb4-4659-b01f-34db018c0e44) | ![instance_iou_std](https://github.com/brainhack-school2024/molinier_project/assets/68945192/f17a912c-c56e-4f38-8ca7-5fea216e614f) |
 
 
 
