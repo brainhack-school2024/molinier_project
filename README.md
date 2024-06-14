@@ -110,12 +110,12 @@ conda install pip
 
 3. Clone this repository
 ```bash
-git clone git@github.com:brainhack-school2024/molinier_project.git
+git clone git@github.com:brainhack-school2024/naive-mri-contrast-translation.git
 ```
 
 4. Install the package and the requirements
 ```bash
-cd molinier_project
+cd naive-mri-contrast-translation
 pip install -r requirements.txt
 pip install -e .
 ```
