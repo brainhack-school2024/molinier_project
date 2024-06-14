@@ -76,5 +76,21 @@ Here, segmentations were aligned by panoptica and metrics were computed for each
 | ![instance_dice](https://github.com/brainhack-school2024/molinier_project/assets/68945192/e97f448b-2ca8-4ba3-8f50-f62bde29bec4) | ![instance_assd](https://github.com/brainhack-school2024/molinier_project/assets/68945192/567edb86-43da-4ffc-8dc5-68770cd4b196) | ![instance_iou](https://github.com/brainhack-school2024/molinier_project/assets/68945192/0b25f2a5-bb12-4c5c-9dc8-09ae678256c1) |
 |![instance_dice_std](https://github.com/brainhack-school2024/molinier_project/assets/68945192/ecdb579c-5f8f-418e-8849-88c57b9e996f) | ![instance_assd_std](https://github.com/brainhack-school2024/molinier_project/assets/68945192/866f0c5f-3eb4-4659-b01f-34db018c0e44) | ![instance_iou_std](https://github.com/brainhack-school2024/molinier_project/assets/68945192/f17a912c-c56e-4f38-8ca7-5fea216e614f) |
 
+| False negative detections (FN) | False positive detections (FN) |
+| :---: | :---: |
+|![false_negative](https://github.com/brainhack-school2024/molinier_project/assets/68945192/94afdc12-0281-49c4-ac34-f4cc638cf79c) | ![false_positive](https://github.com/brainhack-school2024/molinier_project/assets/68945192/20ea3f4f-aacd-4719-9bb3-cee66bb9e56b)|
+
+### Discussion
+
+- One possible reason why spineps worked on a T1w image is that the network was actually trained on the T2w images of the same subjects in the dataset `spider`
+- The increasing rate of false detections (FP and FN) is probably due to the fact that the same features and properties do not appear is the input and output contrast of the translation algorithm: therefore during its training the cGAN may have learned to invent some structures that were not present.
+- The reduction of the dice score and the augmentation of the ASSD metrics is also probably due to slight shape differences of the spine between the input and output contrast.
+
+### Conclusion
+
+Using a contrast translation approach is relevant only if the model does not perform well on the input contrast. Because a naive translation between two different contrasts not highligting the same tissues properties may lead to slight modifications of the anatomy.
+
+To validate the translation approach with vertebral labeling, the inference should be done on a different dataset which was not seen during training of the two deep learning models. Currently, too few MRI datasets with manual segmentation of the spine are available open-source.
+
 
 
