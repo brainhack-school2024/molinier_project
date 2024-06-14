@@ -23,6 +23,15 @@ These deep learning models were only trained on T2-weighted scans
 
 My objective was to generate fake T2w scans from any given contrast to help deep learning models that were only trained on T2w scans during inference.
 
+### Datasets
+
+| Dataset name | Subjects | Contrasts used | Open source | Link |
+| :---: | :---: | :---: | :---: | :---: |
+| spine generic | 267 | T1w and T2w | yes | https://github.com/spine-generic/data-multi-subject |
+| canproco | 450 | PSIR, STIR and T2w | No | X |
+| lumbar-nusantara | 515 | T1w and T2w | yes | https://data.mendeley.com/datasets/k57fr854j2/2 |
+| spider | 218 | T1w and T2w | yes | https://spider.grand-challenge.org/ |
+
 ### Preprocessing steps and method
 
 <img width="930" alt="Screenshot 2024-06-14 at 09 53 12" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/a8c90f38-be21-435f-8f55-8bebaffb5395">
