@@ -1,0 +1,10 @@
+numpy
+pandas
+monai
+progress
+nibabel
+matplotlib
+argparse
+tqdm
+seaborn
+panoptica
