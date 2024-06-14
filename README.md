@@ -1,7 +1,7 @@
 # Short biography
 
 <a href="https://github.com/NathanMolinier">
-   <img src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/35bf52a6-ed2a-4c7f-944f-a040242f5154" width="50px;" alt=""/>
+   <img src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/35bf52a6-ed2a-4c7f-944f-a040242f5154" width="100px;" alt=""/>
 </a>
 
 My name is Nathan Molinier, I'm a PhD student at Polytechnique Montreal, and I use deep learning methods to identify spinal structures on MRI scans.
@@ -36,11 +36,20 @@ My objective was to generate fake T2w scans from any given contrast to help deep
 
 <img width="930" alt="Screenshot 2024-06-14 at 09 53 12" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/a8c90f38-be21-435f-8f55-8bebaffb5395">
 
-### Previous work on cervical data
+### Previous work on cervical FOV
 
-|||
+For this work, the datasets `spine-generic` and `canproco` were used for the training of the cGAN approach.
 
 <img width="1123" alt="Screenshot 2024-06-14 at 09 55 18" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/17379015-3f07-4542-96f6-d97a899f6ab4">
+
+> spineps: https://github.com/Hendrik-code/spineps
+
+### Extension of the method for lumbar FOV
+
+For this work, the dataset `spider` was used for inference, the cGAN approach was only trained with the dataset `lumbar-nusantara`.
+
+<img width="1123" alt="Screenshot 2024-06-14 at 13 52 30" src="https://github.com/brainhack-school2024/molinier_project/assets/68945192/40ff2c71-5454-4fcc-8f6f-82bca7b61e06">
+
 
 
 
