@@ -92,5 +92,47 @@ Using a contrast translation approach is relevant only if the model does not per
 
 To validate the translation approach with vertebral labeling, the inference should be done on a different dataset which was not seen during training of the two deep learning models. Currently, too few MRI datasets with manual segmentation of the spine are available open-source.
 
+# Installation
+
+The following steps are describing how to run the inference of the contrast-translation approach.
+
+> More information about the training will be described in this [repository](https://github.com/spinalcordtoolbox/disc-labeling-playground)
+
+1. First, create a conda environment with python 3.10.
+
+```bash
+conda create --name nct-env python=3.10
+conda activate nct-env
+conda install pip
+```
+
+2. Install the correct version of [pytorch](https://pytorch.org/get-started/locally/) in you environment.
+
+3. Clone this repository
+```bash
+git clone git@github.com:brainhack-school2024/molinier_project.git
+```
+
+4. Install the package and the requirements
+```bash
+cd molinier_project
+pip install -r requirements.txt
+pip install -e .
+```
+
+5. Download the network weights from the release
+
+# Usage
+
+Generate a fake T2w scans from an input contrast 
+
+```
+python src/nct/inference/run_cgan_inference.py --path-in IMG_PATH --path-out OUT_PATH --weight-path WEIGHTS
+```
+
+With:
+- `IMG_PATH` corresponding to the path to your input image
+- `OUT_PATH` corresponding to the discs labels output path
+- `WEIGHTS` corresponding to the path to the network weights from the release
 
 
