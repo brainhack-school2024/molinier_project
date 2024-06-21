@@ -96,6 +96,17 @@ Using a contrast translation approach is relevant only if the model does not per
 
 To validate the translation approach with vertebral labeling, the inference should be done on a different dataset which was not seen during training of the two deep learning models. Currently, too few MRI datasets with manual segmentation of the spine are available open-source.
 
+### References
+
+- Isola, Phillip, Jun-Yan Zhu, Tinghui Zhou, and Alexei A. Efros. “Image-To-Image Translation With Conditional Adversarial Networks,” 1125–34, 2017. https://openaccess.thecvf.com/content_cvpr_2017/html/Isola_Image-To-Image_Translation_With_CVPR_2017_paper.html.
+  
+- Graf, Robert, Joachim Schmitt, Sarah Schlaeger, Hendrik Kristian Möller, Vasiliki Sideri-Lampretsa, Anjany Sekuboyina, Sandro Manuel Krieg, et al. “Denoising Diffusion-Based MRI to CT Image Translation Enables Automated Spinal Segmentation.” European Radiology Experimental 7, no. 1 (November 14, 2023): 70. https://doi.org/10.1186/s41747-023-00385-2.
+  
+- Möller, Hendrik, Robert Graf, Joachim Schmitt, Benjamin Keinert, Matan Atad, Anjany Sekuboyina, Felix Streckenbach, et al. “SPINEPS -- Automatic Whole Spine Segmentation of T2-Weighted MR Images Using a Two-Phase Approach to Multi-Class Semantic and Instance Segmentation.” arXiv, February 26, 2024. http://arxiv.org/abs/2402.16368.
+  
+- Kofler, Florian, Hendrik Möller, Josef A. Buchner, Ezequiel de la Rosa, Ivan Ezhov, Marcel Rosier, Isra Mekki, et al. “Panoptica -- Instance-Wise Evaluation of 3D Semantic and Instance Segmentation Maps.” arXiv, December 5, 2023. https://doi.org/10.48550/arXiv.2312.02608.
+
+
 # Installation
 
 The following steps are describing how to run the inference of the contrast-translation approach.
